@@ -139,6 +139,17 @@
             }
         }, 300);
 
+        // Pause saat pindah tab / minimize, lanjut saat kembali
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                audio.pause();
+            } else {
+                if (sessionStorage.getItem('bgm_playing') === 'true') {
+                    audio.play().catch(e => {});
+                }
+            }
+        });
+
         // Saat klik Buka Undangan, otomatis play musik
         document.getElementById('btn-buka').addEventListener('click', () => {
             sessionStorage.setItem('bgm_playing', 'true');
