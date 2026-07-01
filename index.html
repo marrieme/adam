@@ -150,6 +150,22 @@
             }
         });
 
+        // Pause saat keluar dari browser / pindah app (untuk HP)
+        window.addEventListener('pagehide', () => {
+            audio.pause();
+            sessionStorage.setItem('bgm_playing', 'false');
+        });
+
+        window.addEventListener('blur', () => {
+            audio.pause();
+        });
+
+        window.addEventListener('focus', () => {
+            if (sessionStorage.getItem('bgm_playing') === 'true') {
+                audio.play().catch(e => {});
+            }
+        });
+
         // Saat klik Buka Undangan, otomatis play musik
         document.getElementById('btn-buka').addEventListener('click', () => {
             sessionStorage.setItem('bgm_playing', 'true');
