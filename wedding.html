@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Detail Undangan - Romeo & Juliet</title>
+    <title>Detail Undangan - Adam & Juliet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -71,15 +71,14 @@
             background-color: #eee3d8;
             color: #45413F;
             width: 100%;
-            border-radius: 150px;
+            border-top-left-radius: 150px;
+            border-top-right-radius: 150px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             display: flex;
             flex-direction: column;
-
-            /* Animasi langsung jalan pas pertama kali dibuka (buat card paling atas) */
-            opacity: 0;
-            animation: fadeInOpening 1.5s ease-out forwards;
         }
 
         @keyframes fadeInOpening {
@@ -122,6 +121,8 @@
             height: 400px;
             object-fit: cover;
             display: block;
+            border-bottom-left-radius: 14px;
+            border-bottom-right-radius: 14px;
         }
 
         /* --- SECTION 2: PROFIL PENGANTIN (Latar Belakang Beda) --- */
@@ -357,7 +358,7 @@
 
                 <h1
                     style="font-family: 'Playfair Display', serif; font-size: 4em; line-height: 1.1; margin-bottom: 40px; color: #45413F;">
-                    Romeo<br>
+                    Adam<br>
                     <span
                         style="font-size: 0.5em; font-style: italic; color: #a68c63; display: inline-block; margin: 15px 0;">&</span><br>
                     Juliet
@@ -373,7 +374,7 @@
 
         <!-- Slide It Was (Cerita Singkat) -->
         <div class="story-section">
-            <div class="story-card">
+            <div class="story-card reveal">
                 <div class="story-text">
                     <h3>It was</h3>
                     <h2>Always You</h2>
@@ -397,13 +398,13 @@
 
             <div class="profile-card reveal">
                 <div class="profile-img-frame">
-                    <img src="arul.jpeg" alt="Foto Romeo">
+                    <img src="arul.jpeg" alt="Foto Adam">
                 </div>
-                <h2>Romeo Ardiansyah</h2>
+                <h2>Adam Maulana</h2>
                 <div class="birth-info">Jakarta, 12 Juni 1998</div>
                 <p>
-                    Putra Pertama dari <br>
-                    <b>Bpk. Nama Ayah</b> & <b>Ibu Nama Ibu</b>
+                    Putra Kedua dari <br>
+                    <b>Bpk. Budi Purnama</b> & <b>Ibu Neti</b>
                 </p>
 
                 <a href="https://instagram.com/akun_ig_pria" target="_blank" class="ig-link">
@@ -673,7 +674,7 @@
 
                 <div
                     style="font-family: 'Playfair Display', serif; font-size: 1.6em; margin-top: 40px; color: #a68c63; font-style: italic;">
-                    Romeo & Juliet
+                    Adam & Juliet
                 </div>
             </div>
 

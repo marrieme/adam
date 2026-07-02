@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Undangan Pernikahan Romeo & Juliet</title>
+    <title>Undangan Pernikahan Adam & Juliet</title>
 
     <style>
         * {
@@ -99,7 +99,6 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
         }
-
     </style>
 </head>
 
@@ -108,8 +107,8 @@
     <div class="mobile-container">
         <div class="content-area">
             <p>The Wedding Of</p>
-            <h1>Romeo & Juliet</h1>
-            <p>Minggu, 17 Agustus 2026</p>
+            <h1>Adam & Juliet</h1>
+            <p>Minggu, 19 Juli 2026</p>
 
             <a href="wedding.html" id="btn-buka" class="btn-buka">Buka Undangan</a>
         </div>
@@ -121,18 +120,18 @@
 
     <script>
         const audio = document.getElementById('bg-music');
-        
+
         const isPlaying = sessionStorage.getItem('bgm_playing') === 'true';
         const savedTime = sessionStorage.getItem('bgm_time');
-        
+
         if (savedTime) {
             audio.currentTime = parseFloat(savedTime);
         }
-        
+
         audio.play().then(() => {
             sessionStorage.setItem('bgm_playing', 'true');
         }).catch(e => console.log("Autoplay dicegah oleh browser"));
-        
+
         setInterval(() => {
             if (!audio.paused) {
                 sessionStorage.setItem('bgm_time', audio.currentTime);
@@ -145,7 +144,7 @@
                 audio.pause();
             } else {
                 if (sessionStorage.getItem('bgm_playing') === 'true') {
-                    audio.play().catch(e => {});
+                    audio.play().catch(e => { });
                 }
             }
         });
@@ -162,7 +161,7 @@
 
         window.addEventListener('focus', () => {
             if (sessionStorage.getItem('bgm_playing') === 'true') {
-                audio.play().catch(e => {});
+                audio.play().catch(e => { });
             }
         });
 
