@@ -210,11 +210,18 @@
             }
         }, 500);
 
-        // Resume lagu jika tab kembali aktif
+        // Pause/Resume lagu sesuai status tab
         document.addEventListener('visibilitychange', () => {
-            if (!document.hidden && sessionStorage.getItem('bgm_playing') === 'true') {
+            if (document.hidden) {
+                audio.pause();
+            } else if (sessionStorage.getItem('bgm_playing') === 'true') {
                 attemptPlay();
             }
+        });
+
+        // Pause saat user keluar/navigasi dari halaman
+        window.addEventListener('pagehide', () => {
+            audio.pause();
         });
 
         // Saat klik Buka Undangan, pastikan flag diset true

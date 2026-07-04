@@ -63,8 +63,24 @@
 
         /* --- SECTION 1: STORY CARD --- */
         .story-section {
-            padding: 40px 20px;
-            background-color: #e3d5ca;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('adam1.jpeg');
+            background-size: cover;
+            background-position: center center;
+            filter: blur(2.5px);
+            transform: scale(1.04); /* Mencegah pinggiran putih akibat efek blur */
+            z-index: 1;
         }
 
         .story-card {
@@ -79,6 +95,9 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            position: relative;
+            z-index: 2;
+            /* Berada di atas background */
         }
 
         @keyframes fadeInOpening {
@@ -127,11 +146,236 @@
 
         /* --- SECTION 2: PROFIL PENGANTIN (Latar Belakang Beda) --- */
         .profile-section {
-            background-color: #d6ccbd;
-            /* Latar belakang baru beda warna (lebih hangat) */
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('adam1.jpeg');
+            background-size: cover;
+            background-position: center center;
             padding: 80px 20px;
             text-align: center;
-            color: #45413F;
+            color: #fff;
+        }
+
+        .profile-section .section-title {
+            color: #fff;
+        }
+
+        .profile-section .section-title::after {
+            background-color: #fff;
+        }
+
+        .profile-section .opening-text {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .profile-section .profile-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-section .profile-card h2 {
+            color: #fff;
+        }
+
+        .profile-section .profile-card .birth-info {
+            color: #e8c97e;
+        }
+
+        .profile-section .profile-card p {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .profile-section .profile-card b {
+            color: #fff;
+        }
+
+        .profile-section .ig-icon {
+            fill: #e8c97e;
+        }
+
+        /* --- BACKGROUND GLOBAL: adam1.jpeg --- */
+        .countdown-section,
+        .lovestory-section,
+        .gallery-section,
+        .gift-section,
+        .wishes-section,
+        .closing-section {
+            background-image: url('adam1.jpeg') !important;
+            background-size: cover !important;
+            background-position: center center !important;
+        }
+
+        /* --- GLASSMORPHISM CARDS & TEXT READABILITY OVERRIDES --- */
+        
+        /* 1. Slide 2: Story Card */
+        .story-section .story-card {
+            background-color: rgba(255, 255, 255, 0.08) !important;
+            backdrop-filter: blur(6px) !important;
+            -webkit-backdrop-filter: blur(6px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+        }
+        .story-section .story-text h3 {
+            color: #e8c97e !important;
+        }
+        .story-section .story-text h2 {
+            color: #fff !important;
+        }
+        .story-section .story-text p {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+
+        /* 2. Slide 4: Countdown Section & Event Cards */
+        .countdown-section .section-title {
+            color: #fff !important;
+        }
+        .countdown-section .section-title::after {
+            background-color: #fff !important;
+        }
+        .countdown-section .opening-text {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+        .countdown-container .countdown-item {
+            background-color: rgba(255, 255, 255, 0.08) !important;
+            backdrop-filter: blur(6px) !important;
+            -webkit-backdrop-filter: blur(6px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
+            color: #fff !important;
+        }
+        .countdown-container .countdown-item div {
+            color: #fff !important;
+        }
+        .countdown-section .event-card {
+            background-color: rgba(255, 255, 255, 0.08) !important;
+            backdrop-filter: blur(6px) !important;
+            -webkit-backdrop-filter: blur(6px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+        }
+        .countdown-section .event-card h3 {
+            color: #fff !important;
+        }
+        .countdown-section .event-card p {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+        .countdown-section .event-card b {
+            color: #fff !important;
+        }
+        .countdown-section .event-card svg {
+            stroke: #e8c97e !important;
+        }
+
+        /* 3. Slide 5: Love Story Section */
+        .lovestory-section .section-title {
+            color: #fff !important;
+        }
+        .lovestory-section .section-title span {
+            color: #fff !important;
+        }
+        .lovestory-section .section-title svg {
+            fill: #e8c97e !important;
+        }
+        .lovestory-section .story-timeline {
+            background-color: rgba(255, 255, 255, 0.08) !important;
+            backdrop-filter: blur(6px) !important;
+            -webkit-backdrop-filter: blur(6px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+            border-radius: 20px !important;
+            padding: 30px 20px !important;
+        }
+        .lovestory-section .story-item h3 {
+            color: #fff !important;
+        }
+        .lovestory-section .story-item div {
+            color: #e8c97e !important;
+        }
+        .lovestory-section .story-item p {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+
+        /* 4. Slide 6: Gallery Section */
+        .gallery-section .section-title {
+            color: #fff !important;
+        }
+        .gallery-section .section-title span {
+            color: #fff !important;
+        }
+        .gallery-section .section-title svg {
+            fill: #e8c97e !important;
+        }
+
+        /* 5. Slide 7: Gift Section */
+        .gift-section .section-title {
+            color: #fff !important;
+        }
+        .gift-section .section-title span {
+            color: #fff !important;
+        }
+        .gift-section .section-title svg {
+            fill: #e8c97e !important;
+        }
+        .gift-section .opening-text {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        /* 6. Slide 8: Wishes Section */
+        .wishes-section .section-title {
+            color: #fff !important;
+        }
+        .wishes-section .section-title span {
+            color: #fff !important;
+        }
+        .wishes-section .section-title svg {
+            fill: #e8c97e !important;
+        }
+        .wishes-section .opening-text {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+        .wishes-section .profile-card {
+            background-color: rgba(255, 255, 255, 0.08) !important;
+            backdrop-filter: blur(6px) !important;
+            -webkit-backdrop-filter: blur(6px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+        }
+        .wishes-section .profile-card label {
+            color: #fff !important;
+        }
+        .wishes-section .profile-card input,
+        .wishes-section .profile-card select,
+        .wishes-section .profile-card textarea {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            color: #fff !important;
+        }
+        .wishes-section .profile-card input::placeholder,
+        .wishes-section .profile-card textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6) !important;
+        }
+        .wishes-section .profile-card select option {
+            background-color: #2b2b2b !important;
+            color: #fff !important;
+        }
+
+        /* 7. Slide 9: Closing Section */
+        .closing-section .profile-card {
+            background-color: rgba(255, 255, 255, 0.08) !important;
+            backdrop-filter: blur(6px) !important;
+            -webkit-backdrop-filter: blur(6px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+        }
+        .closing-section .profile-card h3 {
+            color: #fff !important;
+        }
+        .closing-section .profile-card p {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+        .closing-section .profile-card div {
+            color: #e8c97e !important;
         }
 
         .section-title {
@@ -239,88 +483,102 @@
 
         .particle {
             position: absolute;
-            width: 8px;
-            height: 8px;
-            background-color: rgba(166, 140, 99, 0.4);
-            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
             animation: floatUp 10s infinite linear;
-            bottom: -20px;
+            bottom: -35px;
+            pointer-events: none;
+        }
+
+        /* SVG Bunga & Kelopak */
+        .particle:nth-child(odd) {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='3' fill='%23a68c63'/><circle cx='12' cy='5' r='4' fill='%23a68c63'/><circle cx='12' cy='19' r='4' fill='%23a68c63'/><circle cx='5' cy='12' r='4' fill='%23a68c63'/><circle cx='19' cy='12' r='4' fill='%23a68c63'/></svg>");
+        }
+
+        .particle:nth-child(even) {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a68c63'><path d='M12,4 C12,4 16,9 16,12 C16,14.5 14,16.5 12,16.5 C10,16.5 8,14.5 8,12 C8,9 12,4 12,4 Z'/></svg>");
         }
 
         .particle:nth-child(1) {
             left: 10%;
             animation-duration: 12s;
             animation-delay: 0s;
-            width: 12px;
-            height: 12px;
+            width: 15px;
+            height: 15px;
         }
 
         .particle:nth-child(2) {
             left: 25%;
             animation-duration: 15s;
             animation-delay: 2s;
+            width: 12px;
+            height: 12px;
         }
 
         .particle:nth-child(3) {
             left: 40%;
             animation-duration: 11s;
             animation-delay: 4s;
-            width: 15px;
-            height: 15px;
-            background-color: rgba(255, 255, 255, 0.3);
+            width: 18px;
+            height: 18px;
         }
 
         .particle:nth-child(4) {
             left: 55%;
             animation-duration: 14s;
             animation-delay: 1s;
+            width: 13px;
+            height: 13px;
         }
 
         .particle:nth-child(5) {
             left: 70%;
             animation-duration: 13s;
             animation-delay: 5s;
-            width: 10px;
-            height: 10px;
+            width: 16px;
+            height: 16px;
         }
 
         .particle:nth-child(6) {
             left: 85%;
             animation-duration: 16s;
             animation-delay: 3s;
-            background-color: rgba(255, 255, 255, 0.4);
+            width: 14px;
+            height: 14px;
         }
 
         .particle:nth-child(7) {
             left: 30%;
             animation-duration: 18s;
             animation-delay: 6s;
+            width: 17px;
+            height: 17px;
         }
 
         .particle:nth-child(8) {
             left: 75%;
             animation-duration: 11s;
             animation-delay: 7s;
-            width: 14px;
-            height: 14px;
+            width: 15px;
+            height: 15px;
         }
 
         @keyframes floatUp {
             0% {
-                transform: translateY(0) translateX(0) scale(0.8);
+                transform: translateY(0) translateX(0) scale(0.8) rotate(0deg);
                 opacity: 0;
             }
 
             10% {
-                opacity: 1;
+                opacity: 0.22;
             }
 
             90% {
-                opacity: 1;
+                opacity: 0.22;
             }
 
             100% {
-                transform: translateY(-1000px) translateX(40px) scale(1.2);
+                transform: translateY(-1050px) translateX(50px) scale(1.2) rotate(360deg);
                 opacity: 0;
             }
         }
@@ -993,13 +1251,20 @@
             observer.observe(reveal);
         });
 
-        // Countdown Timer
-        // Set target tanggal 12 hari dari waktu akses saat ini
-        const targetDate = new Date().getTime() + (12 * 24 * 60 * 60 * 1000);
+        // Countdown Timer — target tetap: 19 Juli 2026 pukul 08:00 WIB (UTC+7)
+        const targetDate = new Date('2026-07-19T08:00:00+07:00').getTime();
 
-        const countdownInterval = setInterval(() => {
+        function updateCountdown() {
             const now = new Date().getTime();
             const distance = targetDate - now;
+
+            if (distance <= 0) {
+                document.getElementById("days").innerText = "0";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
 
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -1010,15 +1275,11 @@
             document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
             document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
             document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+        }
 
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.getElementById("days").innerText = "0";
-                document.getElementById("hours").innerText = "00";
-                document.getElementById("minutes").innerText = "00";
-                document.getElementById("seconds").innerText = "00";
-            }
-        }, 1000);
+        // Jalankan sekali langsung agar tidak ada jeda 1 detik di awal
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
 
         // Music Logic
         const audio = document.getElementById('bg-music');
@@ -1037,7 +1298,7 @@
             if (!audioUnlocked) return;
             audio.play().then(() => {
                 sessionStorage.setItem('bgm_playing', 'true');
-            }).catch(() => {});
+            }).catch(() => { });
         }
 
         // Tandai audio sudah cukup di-buffer untuk diputar tanpa jeda
@@ -1074,11 +1335,18 @@
             }
         }, 500);
 
-        // Resume lagu jika tab kembali aktif
+        // Pause/Resume lagu sesuai status tab
         document.addEventListener('visibilitychange', () => {
-            if (!document.hidden && sessionStorage.getItem('bgm_playing') === 'true') {
+            if (document.hidden) {
+                audio.pause();
+            } else if (sessionStorage.getItem('bgm_playing') === 'true') {
                 attemptPlay();
             }
+        });
+
+        // Pause saat user keluar/navigasi dari halaman
+        window.addEventListener('pagehide', () => {
+            audio.pause();
         });
 
         // Copy Account function
