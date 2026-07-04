@@ -30,11 +30,9 @@
             width: 100%;
             max-width: 480px;
             height: 100vh;
-            /* Dikembalikan ke 100vh biar full atas-bawah */
-            background-color: #e3d5ca;
+            background-color: #1a1a1a;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
             border-radius: 20px;
-            /* Ujung tetap tumpul membelok */
             overflow: hidden;
             position: relative;
 
@@ -42,6 +40,31 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+
+        /* Video Background */
+        .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        /* Overlay gelap di atas video */
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0.35) 0%,
+                    rgba(0, 0, 0, 0.2) 50%,
+                    rgba(0, 0, 0, 0.65) 100%);
+            z-index: 1;
         }
 
         /* SHAPE LENGKUNG DI BAWAH */
@@ -52,15 +75,15 @@
             left: -20%;
             width: 140%;
             height: 35%;
-            background-color: #45413F;
+            background-color: rgba(45, 38, 34, 0.85);
             border-radius: 50% 50% 0 0;
-            z-index: 1;
+            z-index: 2;
         }
 
         /* Area Teks & Tombol */
         .content-area {
             position: relative;
-            z-index: 2;
+            z-index: 3;
             text-align: center;
             width: 100%;
             padding: 20px;
@@ -68,15 +91,17 @@
         }
 
         .content-area p {
-            color: #5a4a42;
+            color: #f5ede6;
             font-size: 1.1em;
             margin-bottom: 5px;
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
         }
 
         h1 {
             font-size: 2.8em;
-            color: #5a4a42;
+            color: #fff;
             margin: 10px 0 20px 0;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
         }
 
         /* DESAIN TOMBOL */
@@ -105,6 +130,14 @@
 <body>
 
     <div class="mobile-container">
+        <!-- Video Background -->
+        <video class="bg-video" autoplay muted loop playsinline>
+            <source src="adot.mp4" type="video/mp4">
+        </video>
+
+        <!-- Overlay Gelap -->
+        <div class="video-overlay"></div>
+
         <div class="content-area">
             <p>The Wedding Of</p>
             <h1>Adam & Juliet</h1>
