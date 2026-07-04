@@ -140,7 +140,7 @@
 
         <div class="content-area">
             <p>The Wedding Of</p>
-            <h1>Adam & Juliet</h1>
+            <h1>Adam & Marwah</h1>
             <p>Minggu, 19 Juli 2026</p>
 
             <a href="wedding.html" id="btn-buka" class="btn-buka">Buka Undangan</a>
@@ -153,17 +153,34 @@
 
     <script>
         const audio = document.getElementById('bg-music');
-
-        const isPlaying = sessionStorage.getItem('bgm_playing') === 'true';
         const savedTime = sessionStorage.getItem('bgm_time');
 
         if (savedTime) {
             audio.currentTime = parseFloat(savedTime);
         }
 
-        audio.play().then(() => {
-            sessionStorage.setItem('bgm_playing', 'true');
-        }).catch(e => console.log("Autoplay dicegah oleh browser"));
+        function playAudio() {
+            audio.play().then(() => {
+                sessionStorage.setItem('bgm_playing', 'true');
+                removeInteractionListeners();
+            }).catch(e => {
+                console.log("Autoplay blocked by browser. Awaiting user interaction.");
+            });
+        }
+
+        function removeInteractionListeners() {
+            document.removeEventListener('click', playAudio);
+            document.removeEventListener('touchstart', playAudio);
+            window.removeEventListener('scroll', playAudio);
+        }
+
+        // Coba putar langsung
+        playAudio();
+
+        // Jika diblokir, putar saat user menyentuh, klik, atau scroll layar
+        document.addEventListener('click', playAudio);
+        document.addEventListener('touchstart', playAudio);
+        window.addEventListener('scroll', playAudio);
 
         setInterval(() => {
             if (!audio.paused) {
@@ -177,7 +194,7 @@
                 audio.pause();
             } else {
                 if (sessionStorage.getItem('bgm_playing') === 'true') {
-                    audio.play().catch(e => { });
+                    playAudio();
                 }
             }
         });
@@ -194,11 +211,11 @@
 
         window.addEventListener('focus', () => {
             if (sessionStorage.getItem('bgm_playing') === 'true') {
-                audio.play().catch(e => { });
+                playAudio();
             }
         });
 
-        // Saat klik Buka Undangan, otomatis play musik
+        // Saat klik Buka Undangan, pastikan flag diset true
         document.getElementById('btn-buka').addEventListener('click', () => {
             sessionStorage.setItem('bgm_playing', 'true');
         });
