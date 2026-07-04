@@ -345,27 +345,30 @@
 
         <!-- Slide Baru (Paling Atas) -->
         <div class="cover-section"
-            style="position: relative; overflow: hidden; background-color: #d6ccbd; padding: 60px 20px; text-align: center; color: #45413F; min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+            style="position: relative; overflow: hidden; background-image: url('adam1.jpeg'); background-size: cover; background-position: center center; padding: 60px 20px; text-align: center; color: #fff; min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+
+            <!-- Overlay Gelap -->
+            <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.45); z-index: 1;"></div>
 
             <!-- Card Utama -->
             <div class="profile-card reveal"
-                style="background-color: #eee3d8; border-radius: 200px; padding: 120px 35px; margin-bottom: 0; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); position: relative; z-index: 2; width: 100%; max-width: 420px; min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                style="background-color: rgba(255, 255, 255, 0.08); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.2); border-radius: 200px; padding: 120px 35px; margin-bottom: 0; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); position: relative; z-index: 2; width: 100%; max-width: 420px; min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
 
                 <h4
-                    style="font-family: 'Arial', sans-serif; font-size: 1.1em; letter-spacing: 3px; color: #777; margin-bottom: 30px; text-transform: uppercase;">
+                    style="font-family: 'Arial', sans-serif; font-size: 1.1em; letter-spacing: 3px; color: rgba(255,255,255,0.8); margin-bottom: 30px; text-transform: uppercase;">
                     The Wedding Of
                 </h4>
 
                 <h1
-                    style="font-family: 'Playfair Display', serif; font-size: 4em; line-height: 1.1; margin-bottom: 40px; color: #45413F;">
+                    style="font-family: 'Playfair Display', serif; font-size: 4em; line-height: 1.1; margin-bottom: 40px; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.4);">
                     Adam<br>
                     <span
-                        style="font-size: 0.5em; font-style: italic; color: #a68c63; display: inline-block; margin: 15px 0;">&</span><br>
+                        style="font-size: 0.5em; font-style: italic; color: #e8c97e; display: inline-block; margin: 15px 0;">&</span><br>
                     Marwah
                 </h1>
 
                 <div
-                    style="font-family: 'Playfair Display', serif; font-size: 1.3em; font-weight: bold; color: #45413F; letter-spacing: 1px; margin-top: 15px;">
+                    style="font-family: 'Playfair Display', serif; font-size: 1.3em; font-weight: bold; color: rgba(255,255,255,0.9); letter-spacing: 1px; margin-top: 15px; text-shadow: 0 1px 6px rgba(0,0,0,0.3);">
                     19 Juli 2026
                 </div>
 
@@ -724,50 +727,70 @@
             </h2>
 
             <p class="opening-text reveal" style="margin-bottom: 40px; text-align: center;">
-                Tanpa mengurangi rasa hormat, bagi Bapak/Ibu/Saudara/i yang ingin memberikan tanda kasih untuk kami, dapat melalui rekening/e-wallet di bawah ini:
+                Tanpa mengurangi rasa hormat, bagi Bapak/Ibu/Saudara/i yang ingin memberikan tanda kasih untuk kami,
+                dapat melalui rekening/e-wallet di bawah ini:
             </p>
 
             <!-- Container Kartu-Kartu -->
-            <div class="gift-cards-container reveal" style="display: flex; flex-direction: column; align-items: center; gap: 30px; max-width: 480px; margin: 0 auto; padding: 0 10px;">
-                
+            <div class="gift-cards-container reveal"
+                style="display: flex; flex-direction: column; align-items: center; gap: 30px; max-width: 480px; margin: 0 auto; padding: 0 10px;">
+
                 <!-- Kartu Bank BCA -->
-                <div class="bank-card" style="width: 100%; max-width: 360px; aspect-ratio: 1.586/1; background: linear-gradient(135deg, #45413f 0%, #2b2b2b 100%); border-radius: 16px; padding: 24px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); text-align: left; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
+                <div class="bank-card"
+                    style="width: 100%; max-width: 360px; aspect-ratio: 1.586/1; background: linear-gradient(135deg, #45413f 0%, #2b2b2b 100%); border-radius: 16px; padding: 24px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); text-align: left; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
                     <!-- Efek kilau hologram / gradasi tipis -->
-                    <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%); pointer-events: none;"></div>
-                    
+                    <div
+                        style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%); pointer-events: none;">
+                    </div>
+
                     <!-- Bagian Atas: Chip dan Logo Bank -->
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <!-- SVG Chip Kartu Gold -->
                         <svg width="45" height="35" viewBox="0 0 45 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="45" height="35" rx="6" fill="#d4af37" fill-opacity="0.8"/>
-                            <rect x="4" y="4" width="37" height="27" rx="4" stroke="#5a4100" stroke-width="1.2" stroke-opacity="0.3"/>
-                            <line x1="15" y1="4" x2="15" y2="31" stroke="#5a4100" stroke-width="1.2" stroke-opacity="0.3"/>
-                            <line x1="30" y1="4" x2="30" y2="31" stroke="#5a4100" stroke-width="1.2" stroke-opacity="0.3"/>
-                            <line x1="4" y1="17.5" x2="41" y2="17.5" stroke="#5a4100" stroke-width="1.2" stroke-opacity="0.3"/>
+                            <rect width="45" height="35" rx="6" fill="#d4af37" fill-opacity="0.8" />
+                            <rect x="4" y="4" width="37" height="27" rx="4" stroke="#5a4100" stroke-width="1.2"
+                                stroke-opacity="0.3" />
+                            <line x1="15" y1="4" x2="15" y2="31" stroke="#5a4100" stroke-width="1.2"
+                                stroke-opacity="0.3" />
+                            <line x1="30" y1="4" x2="30" y2="31" stroke="#5a4100" stroke-width="1.2"
+                                stroke-opacity="0.3" />
+                            <line x1="4" y1="17.5" x2="41" y2="17.5" stroke="#5a4100" stroke-width="1.2"
+                                stroke-opacity="0.3" />
                         </svg>
-                        
+
                         <!-- Nama Bank -->
-                        <div style="font-family: 'Arial', sans-serif; font-weight: bold; font-style: italic; font-size: 1.4em; color: #eee3d8; letter-spacing: 1px;">BCA</div>
+                        <div
+                            style="font-family: 'Arial', sans-serif; font-weight: bold; font-style: italic; font-size: 1.4em; color: #eee3d8; letter-spacing: 1px;">
+                            BCA</div>
                     </div>
 
                     <!-- Bagian Tengah: Nomor Rekening -->
                     <div>
-                        <div style="font-size: 0.75em; color: #a68c63; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px;">Nomor Rekening</div>
-                        <div style="font-family: 'Courier New', Courier, monospace; font-size: 1.5em; font-weight: bold; color: #eee3d8; letter-spacing: 2px;">
-                            8630 4519 23
+                        <div
+                            style="font-size: 0.75em; color: #a68c63; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px;">
+                            Nomor Rekening</div>
+                        <div
+                            style="font-family: 'Courier New', Courier, monospace; font-size: 1.5em; font-weight: bold; color: #eee3d8; letter-spacing: 2px;">
+                            7295 5432 56
                         </div>
                     </div>
 
                     <!-- Bagian Bawah: Nama Pemilik -->
                     <div style="display: flex; justify-content: space-between; align-items: flex-end;">
                         <div>
-                            <div style="font-size: 0.75em; color: #a68c63; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 3px;">Pemilik Rekening</div>
-                            <div style="font-family: 'Lora', serif; font-size: 1em; font-weight: bold; color: #eee3d8; letter-spacing: 1px;">DWI ADAM MAULANA</div>
+                            <div
+                                style="font-size: 0.75em; color: #a68c63; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 3px;">
+                                Pemilik Rekening</div>
+                            <div
+                                style="font-family: 'Lora', serif; font-size: 1em; font-weight: bold; color: #eee3d8; letter-spacing: 1px;">
+                                IKOTUL MARWAH</div>
                         </div>
-                        
+
                         <!-- Tombol Salin -->
-                        <button onclick="copyAccount('8630451923', this)" style="background-color: #eee3d8; color: #45413f; border: none; padding: 8px 16px; border-radius: 20px; font-size: 0.8em; font-weight: bold; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 5px; outline: none;">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <button onclick="copyAccount('7295543256', this)"
+                            style="background-color: #eee3d8; color: #45413f; border: none; padding: 8px 16px; border-radius: 20px; font-size: 0.8em; font-weight: bold; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 5px; outline: none;">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                             </svg>
@@ -777,43 +800,61 @@
                 </div>
 
                 <!-- Kartu E-Wallet DANA -->
-                <div class="bank-card" style="width: 100%; max-width: 360px; aspect-ratio: 1.586/1; background: linear-gradient(135deg, #1d6199 0%, #104270 100%); border-radius: 16px; padding: 24px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); text-align: left; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
+                <div class="bank-card"
+                    style="width: 100%; max-width: 360px; aspect-ratio: 1.586/1; background: linear-gradient(135deg, #1d6199 0%, #104270 100%); border-radius: 16px; padding: 24px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); text-align: left; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
                     <!-- Efek kilau hologram / gradasi tipis -->
-                    <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%); pointer-events: none;"></div>
-                    
+                    <div
+                        style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%); pointer-events: none;">
+                    </div>
+
                     <!-- Bagian Atas: Chip dan Logo E-Wallet -->
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <!-- SVG Chip Kartu Gold -->
                         <svg width="45" height="35" viewBox="0 0 45 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="45" height="35" rx="6" fill="#d4af37" fill-opacity="0.8"/>
-                            <rect x="4" y="4" width="37" height="27" rx="4" stroke="#5a4100" stroke-width="1.2" stroke-opacity="0.3"/>
-                            <line x1="15" y1="4" x2="15" y2="31" stroke="#5a4100" stroke-width="1.2" stroke-opacity="0.3"/>
-                            <line x1="30" y1="4" x2="30" y2="31" stroke="#5a4100" stroke-width="1.2" stroke-opacity="0.3"/>
-                            <line x1="4" y1="17.5" x2="41" y2="17.5" stroke="#5a4100" stroke-width="1.2" stroke-opacity="0.3"/>
+                            <rect width="45" height="35" rx="6" fill="#d4af37" fill-opacity="0.8" />
+                            <rect x="4" y="4" width="37" height="27" rx="4" stroke="#5a4100" stroke-width="1.2"
+                                stroke-opacity="0.3" />
+                            <line x1="15" y1="4" x2="15" y2="31" stroke="#5a4100" stroke-width="1.2"
+                                stroke-opacity="0.3" />
+                            <line x1="30" y1="4" x2="30" y2="31" stroke="#5a4100" stroke-width="1.2"
+                                stroke-opacity="0.3" />
+                            <line x1="4" y1="17.5" x2="41" y2="17.5" stroke="#5a4100" stroke-width="1.2"
+                                stroke-opacity="0.3" />
                         </svg>
-                        
+
                         <!-- Nama E-wallet -->
-                        <div style="font-family: 'Arial', sans-serif; font-weight: bold; font-size: 1.4em; color: #eee3d8; letter-spacing: 1px;">DANA</div>
+                        <div
+                            style="font-family: 'Arial', sans-serif; font-weight: bold; font-size: 1.4em; color: #eee3d8; letter-spacing: 1px;">
+                            DANA</div>
                     </div>
 
                     <!-- Bagian Tengah: Nomor E-Wallet -->
                     <div>
-                        <div style="font-size: 0.75em; color: #8ab6dc; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px;">Nomor E-Wallet</div>
-                        <div style="font-family: 'Courier New', Courier, monospace; font-size: 1.5em; font-weight: bold; color: #eee3d8; letter-spacing: 2px;">
-                            0895 3226 7740 6
+                        <div
+                            style="font-size: 0.75em; color: #8ab6dc; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px;">
+                            Nomor E-Wallet</div>
+                        <div
+                            style="font-family: 'Courier New', Courier, monospace; font-size: 1.5em; font-weight: bold; color: #eee3d8; letter-spacing: 2px;">
+                            0895 2555 6413
                         </div>
                     </div>
 
                     <!-- Bagian Bawah: Nama Pemilik -->
                     <div style="display: flex; justify-content: space-between; align-items: flex-end;">
                         <div>
-                            <div style="font-size: 0.75em; color: #8ab6dc; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 3px;">Penerima</div>
-                            <div style="font-family: 'Lora', serif; font-size: 1em; font-weight: bold; color: #eee3d8; letter-spacing: 1px;">IKOTUL MARWAH</div>
+                            <div
+                                style="font-size: 0.75em; color: #8ab6dc; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 3px;">
+                                Penerima</div>
+                            <div
+                                style="font-family: 'Lora', serif; font-size: 1em; font-weight: bold; color: #eee3d8; letter-spacing: 1px;">
+                                IKOTUL MARWAH</div>
                         </div>
-                        
+
                         <!-- Tombol Salin -->
-                        <button onclick="copyAccount('0895322677406', this)" style="background-color: #eee3d8; color: #104270; border: none; padding: 8px 16px; border-radius: 20px; font-size: 0.8em; font-weight: bold; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 5px; outline: none;">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <button onclick="copyAccount('089525556413', this)"
+                            style="background-color: #eee3d8; color: #104270; border: none; padding: 8px 16px; border-radius: 20px; font-size: 0.8em; font-weight: bold; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 5px; outline: none;">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                             </svg>
@@ -849,18 +890,23 @@
                 Berikan ucapan selamat dan doa restu Anda untuk mengiringi langkah baru kami.
             </p>
 
-            <div class="profile-card reveal" style="background-color: #eee3d8; border-radius: 30px; padding: 40px 25px; margin-bottom: 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); max-width: 440px; margin: 0 auto; text-align: left;">
+            <div class="profile-card reveal"
+                style="background-color: #eee3d8; border-radius: 30px; padding: 40px 25px; margin-bottom: 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); max-width: 440px; margin: 0 auto; text-align: left;">
                 <form id="wishesForm" onsubmit="sendWishes(event)">
-                    
+
                     <div style="margin-bottom: 20px;">
-                        <label for="guestName" style="display: block; font-size: 0.9em; font-weight: bold; color: #45413F; margin-bottom: 8px;">Nama Lengkap</label>
-                        <input type="text" id="guestName" required placeholder="Masukkan nama Anda" 
+                        <label for="guestName"
+                            style="display: block; font-size: 0.9em; font-weight: bold; color: #45413F; margin-bottom: 8px;">Nama
+                            Lengkap</label>
+                        <input type="text" id="guestName" required placeholder="Masukkan nama Anda"
                             style="width: 100%; padding: 12px 15px; border: 1px solid #d6ccbd; border-radius: 12px; background-color: #fcf9f6; font-family: 'Lora', serif; font-size: 0.95em; color: #45413F; outline: none; box-sizing: border-box; transition: border-color 0.3s;">
                     </div>
 
                     <div style="margin-bottom: 20px;">
-                        <label for="attendance" style="display: block; font-size: 0.9em; font-weight: bold; color: #45413F; margin-bottom: 8px;">Status Kehadiran</label>
-                        <select id="attendance" required 
+                        <label for="attendance"
+                            style="display: block; font-size: 0.9em; font-weight: bold; color: #45413F; margin-bottom: 8px;">Status
+                            Kehadiran</label>
+                        <select id="attendance" required
                             style="width: 100%; padding: 12px 15px; border: 1px solid #d6ccbd; border-radius: 12px; background-color: #fcf9f6; font-family: 'Lora', serif; font-size: 0.95em; color: #45413F; outline: none; box-sizing: border-box; transition: border-color 0.3s;">
                             <option value="" disabled selected>Pilih Kehadiran</option>
                             <option value="Hadir">Saya Akan Hadir</option>
@@ -870,20 +916,23 @@
                     </div>
 
                     <div style="margin-bottom: 25px;">
-                        <label for="wishesMessage" style="display: block; font-size: 0.9em; font-weight: bold; color: #45413F; margin-bottom: 8px;">Ucapan & Doa</label>
-                        <textarea id="wishesMessage" required rows="4" placeholder="Tulis ucapan & doa restu Anda..." 
+                        <label for="wishesMessage"
+                            style="display: block; font-size: 0.9em; font-weight: bold; color: #45413F; margin-bottom: 8px;">Ucapan
+                            & Doa</label>
+                        <textarea id="wishesMessage" required rows="4" placeholder="Tulis ucapan & doa restu Anda..."
                             style="width: 100%; padding: 12px 15px; border: 1px solid #d6ccbd; border-radius: 12px; background-color: #fcf9f6; font-family: 'Lora', serif; font-size: 0.95em; color: #45413F; outline: none; resize: vertical; box-sizing: border-box; transition: border-color 0.3s;"></textarea>
                     </div>
 
-                    <button type="submit" 
+                    <button type="submit"
                         style="width: 100%; padding: 15px; background-color: #45413F; color: #eee3d8; border: none; border-radius: 30px; font-size: 0.95em; font-weight: bold; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; justify-content: center; align-items: center; gap: 8px;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M22 2L11 13"></path>
                             <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
                         </svg>
                         Kirim Ucapan (WhatsApp)
                     </button>
-                    
+
                 </form>
             </div>
         </div>
@@ -918,8 +967,9 @@
 
     </div>
 
-    <audio id="bg-music" autoplay loop>
+    <audio id="bg-music" loop preload="auto">
         <source src="song.mp3" type="audio/mpeg">
+        <source src="song.mp3" type="audio/ogg">
     </audio>
 
     <script>
@@ -972,73 +1022,62 @@
 
         // Music Logic
         const audio = document.getElementById('bg-music');
-        const savedTime = sessionStorage.getItem('bgm_time');
+        let audioUnlocked = false;
 
+        // Pulihkan posisi lagu jika ada
+        const savedTime = sessionStorage.getItem('bgm_time');
         if (savedTime) {
             audio.currentTime = parseFloat(savedTime);
         }
 
-        function playAudio() {
+        // Mulai preload segera
+        audio.load();
+
+        function attemptPlay() {
+            if (!audioUnlocked) return;
             audio.play().then(() => {
                 sessionStorage.setItem('bgm_playing', 'true');
-                removeInteractionListeners();
-            }).catch(e => {
-                console.log("Autoplay blocked by browser. Awaiting user interaction.");
-            });
+            }).catch(() => {});
         }
 
-        function removeInteractionListeners() {
-            document.removeEventListener('click', playAudio);
-            document.removeEventListener('touchstart', playAudio);
-            window.removeEventListener('scroll', playAudio);
-            const mainScroll = document.getElementById('mainScroll');
-            if (mainScroll) {
-                mainScroll.removeEventListener('scroll', playAudio);
-            }
+        // Tandai audio sudah cukup di-buffer untuk diputar tanpa jeda
+        audio.addEventListener('canplaythrough', () => {
+            if (audioUnlocked) attemptPlay();
+        });
+
+        // Fungsi unlock audio (hanya sekali dibutuhkan, terutama untuk iOS/Safari)
+        function unlockAudio() {
+            if (audioUnlocked) return;
+            audioUnlocked = true;
+            audio.load();
+            attemptPlay();
+            document.removeEventListener('touchstart', unlockAudio, true);
+            document.removeEventListener('touchend', unlockAudio, true);
+            document.removeEventListener('click', unlockAudio, true);
         }
 
-        // Coba putar langsung
-        playAudio();
+        // Coba autoplay langsung (berhasil di Chrome Android)
+        audio.play().then(() => {
+            audioUnlocked = true;
+            sessionStorage.setItem('bgm_playing', 'true');
+        }).catch(() => {
+            // Diblokir browser — tunggu interaksi pertama user
+            document.addEventListener('touchstart', unlockAudio, true);
+            document.addEventListener('touchend', unlockAudio, true);
+            document.addEventListener('click', unlockAudio, true);
+        });
 
-        // Jika diblokir, putar saat user menyentuh, klik, atau scroll layar/container
-        document.addEventListener('click', playAudio);
-        document.addEventListener('touchstart', playAudio);
-        window.addEventListener('scroll', playAudio);
-        const mainScroll = document.getElementById('mainScroll');
-        if (mainScroll) {
-            mainScroll.addEventListener('scroll', playAudio);
-        }
-
+        // Simpan posisi lagu setiap 500ms
         setInterval(() => {
             if (!audio.paused) {
                 sessionStorage.setItem('bgm_time', audio.currentTime);
             }
-        }, 300);
+        }, 500);
 
-        // Pause saat pindah tab / minimize, lanjut saat kembali
+        // Resume lagu jika tab kembali aktif
         document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                audio.pause();
-            } else {
-                if (sessionStorage.getItem('bgm_playing') === 'true') {
-                    playAudio();
-                }
-            }
-        });
-
-        // Pause saat keluar dari browser / pindah app (untuk HP)
-        window.addEventListener('pagehide', () => {
-            audio.pause();
-            sessionStorage.setItem('bgm_playing', 'false');
-        });
-
-        window.addEventListener('blur', () => {
-            audio.pause();
-        });
-
-        window.addEventListener('focus', () => {
-            if (sessionStorage.getItem('bgm_playing') === 'true') {
-                playAudio();
+            if (!document.hidden && sessionStorage.getItem('bgm_playing') === 'true') {
+                attemptPlay();
             }
         });
 
@@ -1067,10 +1106,10 @@
 
             // Template pesan WhatsApp
             const text = `Halo Adam & Marwah,\n\nSaya ingin mengucapkan selamat atas pernikahan kalian!\n\n*Nama:* ${name}\n*Kehadiran:* ${attendance}\n*Ucapan & Doa:* ${message}`;
-            
-            const phone = "6289671744102"; // No Adam Maulana dalam format internasional
+
+            const phone = "6289525556413"; // No Ikotul Marwah dalam format internasional
             const waUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
-            
+
             window.open(waUrl, '_blank');
         }
     </script>
