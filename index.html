@@ -43,14 +43,17 @@
             align-items: center;
         }
 
-        /* Video Background */
-        .bg-video {
+        /* Photo Background */
+        .bg-photo {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            background-image: url('bg1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             z-index: 0;
             filter: brightness(0.8) saturate(1.35) contrast(1.05);
         }
@@ -188,10 +191,8 @@
 <body>
 
     <div class="mobile-container">
-        <!-- Video Background -->
-        <video class="bg-video" autoplay muted loop playsinline>
-            <source src="adot1.mp4" type="video/mp4">
-        </video>
+        <!-- Photo Background -->
+        <div class="bg-photo"></div>
 
         <!-- Overlay Gelap -->
         <div class="video-overlay"></div>
