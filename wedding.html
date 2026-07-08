@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Detail Undangan - Adam & Marwah</title>
+    <title>Undangan Pernikahan - Adam & Marwah</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -84,6 +84,19 @@
             z-index: 1;
         }
 
+        /* Overlay gelap di atas foto story-section */
+        .story-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.50);
+            z-index: 1;
+            pointer-events: none;
+        }
+
         .story-card {
             background-color: #eee3d8;
             color: #45413F;
@@ -147,7 +160,7 @@
 
         /* --- SECTION 2: PROFIL PENGANTIN (Latar Belakang Beda) --- */
         .profile-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('adam1.jpeg');
+            background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('adam1.jpeg');
             background-size: cover;
             background-position: center center;
             padding: 80px 20px;
@@ -205,6 +218,33 @@
             background-image: url('adam1.jpeg') !important;
             background-size: cover !important;
             background-position: center center !important;
+            position: relative;
+        }
+
+        /* Overlay gelap untuk semua section dengan background foto */
+        .countdown-section::before,
+        .lovestory-section::before,
+        .gallery-section::before,
+        .gift-section::before,
+        .wishes-section::before,
+        .closing-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.52);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Pastikan konten di dalam section-section tersebut muncul di atas overlay */
+        .countdown-section>*,
+        .lovestory-section>*,
+        .gallery-section>*,
+        .gift-section>*,
+        .wishes-section>*,
+        .closing-section>* {
+            position: relative;
+            z-index: 1;
         }
 
         /* --- GLASSMORPHISM CARDS & TEXT READABILITY OVERRIDES --- */
@@ -781,7 +821,7 @@
                         (Qs. Ar. Rum : 21)
                     </p>
                 </div>
-                <img src="adam1.jpeg" alt="Foto Mempelai" class="story-photo">
+                <img src="wle.png" alt="Foto Mempelai" class="story-photo">
             </div>
         </div>
 
@@ -1021,11 +1061,13 @@
                         Awal Cerita</h3>
                     <div
                         style="font-size: 0.85em; font-weight: bold; color: #a68c63; margin-bottom: 12px; letter-spacing: 1px;">
-                        DESEMBER 2020</div>
-                    <p style="font-size: 0.95em; line-height: 1.7; color: #555;">Kisah kami dimulai dari bangku kuliah,
-                        berawal dari tugas kelompok yang tanpa disengaja mempertemukan kami. Perbincangan singkat
-                        tentang pelajaran perlahan berubah menjadi obrolan panjang tentang mimpi dan harapan. Sejak saat
-                        itu, kami merasa memiliki kecocokan yang membuat kami semakin dekat dari hari ke hari.</p>
+                        OKTOBER 2025</div>
+                    <p style="font-size: 0.95em; line-height: 1.7; color: #555;">Kisah kami dimulai dari suatu
+                        pekerjaan, berawal dari perintah atasan yang tanpa sengaja mempertemukan kami.
+                        Obrolan, canda dan tawa yang singkat kini berubah menjadi obrolan panjang tentang mimpi dan
+                        harapan.
+                        Berjalannya hari ke hari kami merasakan sifat, sikap, dan perlakuan yang bisa bikin diri sendiri
+                        lebih aman, nyaman, tentram dan selalu merindukan tempat pulang pada pasangannya.</p>
                 </div>
 
                 <div class="story-item" style="margin-bottom: 50px;">
@@ -1034,12 +1076,16 @@
                         Lamaran</h3>
                     <div
                         style="font-size: 0.85em; font-weight: bold; color: #a68c63; margin-bottom: 12px; letter-spacing: 1px;">
-                        14 FEBRUARI 2025</div>
-                    <p style="font-size: 0.95em; line-height: 1.7; color: #555;">Di sebuah makan malam yang tenang
-                        dengan iringan rintik hujan, dia tiba-tiba berlutut dan mengeluarkan sebuah cincin yang begitu
-                        indah. Dengan suara yang sedikit gemetar namun penuh keyakinan, dia memintaku untuk menghabiskan
-                        sisa hidup bersama. Tentu saja, jawaban 'Iya' meluncur dengan penuh haru dan air mata bahagia.
-                    </p>
+                        18 JUNI 2026</div>
+                    <p style="font-size: 0.95em; line-height: 1.7; color: #555;">Setelah meminta restu kepada kedua
+                        orang tua kami, dan tidak henti-hentinya kami untuk slalu ikhtiar dan berdo'a kepada Allah, hari
+                        ini
+                        pada tanggal 18 Juni 2026 disebuah kampung yang bernama kp Cadas Karet,Kab.Tangerang ditempat
+                        kediamannya Perempuan, dengan diikuti keadaan alam gerimis rintik-rintik yang membuat kondisi
+                        suasana
+                        semakin tenang dan syahdu.
+                        Saya mengungkapkan isi hati sedalam-dalamnya bahwa "saya dan marwah akan selalu bersama-sama
+                        belajar, berusaha dan berdo'a untuk hidup berumah tangga yang baik".</p>
                 </div>
 
                 <div class="story-item" style="margin-bottom: 20px;">
@@ -1049,10 +1095,10 @@
                     <div
                         style="font-size: 0.85em; font-weight: bold; color: #a68c63; margin-bottom: 12px; letter-spacing: 1px;">
                         19 JULI 2026</div>
-                    <p style="font-size: 0.95em; line-height: 1.7; color: #555;">Kini, kami melangkah menuju lembaran
-                        baru yang telah lama dinantikan. Hari di mana dua keluarga bersatu dan dua hati berjanji untuk
-                        saling menjaga dan setia di hadapan Tuhan. Kami berharap cinta ini akan terus bertumbuh dan
-                        menemani langkah kami hingga menua bersama selamanya.</p>
+                    <p style="font-size: 0.95em; line-height: 1.7; color: #555;">Kini dititik ini, kami dengan izin
+                        Allah membuka lembaran baru bersama, melangkah bersama, berusaha bersama untuk mewujudkan mimpi
+                        dan harapan kami dari awal yaitu menciptakan keluarga yang sakinah mawadah warohmah, harmonis,
+                        humoris dan romantis🥰.</p>
                 </div>
 
             </div>
@@ -1082,7 +1128,7 @@
                 style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 0 10px; max-width: 480px; margin: 0 auto;">
                 <div
                     style="aspect-ratio: 3/4; overflow: hidden; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
-                    <img src="adam1.jpeg" alt="Gallery 1" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="wle2.png" alt="Gallery 1" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div
                     style="aspect-ratio: 3/4; overflow: hidden; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
